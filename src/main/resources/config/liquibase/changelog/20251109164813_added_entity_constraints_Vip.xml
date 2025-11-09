@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Vip.
+    -->
+    <changeSet id="20251109164813-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="vip_id"
+                                 baseTableName="rel_vip__guest"
+                                 constraintName="fk_rel_vip__guest__vip_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vip"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="guest_id"
+                                 baseTableName="rel_vip__guest"
+                                 constraintName="fk_rel_vip__guest__guest_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guest"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+{
+  "learnMariadbApp": {
+    "countryStats": {
+      "home": {
+        "title": "Country Stats",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Country Stats",
+        "createOrEditLabel": "Create or edit a Country Stats",
+        "notFound": "No Country Stats found"
+      },
+      "created": "A new Country Stats is created with identifier { param }",
+      "updated": "A Country Stats is updated with identifier { param }",
+      "deleted": "A Country Stats is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Country Stats { id }?"
+      },
+      "detail": {
+        "title": "Country Stats"
+      },
+      "id": "ID",
+      "year": "Year",
+      "population": "Population",
+      "gdp": "Gdp",
+      "country": "Country"
+    }
+  }
+}
