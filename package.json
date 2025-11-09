@@ -113,7 +113,7 @@
     "eslint-plugin-vue": "10.1.0",
     "flush-promises": "1.0.2",
     "generator-jhipster": "8.11.0",
-    "happy-dom": "17.4.6",
+    "happy-dom": "20.0.2",
     "husky": "9.1.7",
     "lint-staged": "15.5.2",
     "numeral": "2.0.6",
