@@ -1,0 +1,3 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    io.santhoshkani.learn.mariadb.config.\
+    SqlTestContainersSpringContextCustomizerFactory
