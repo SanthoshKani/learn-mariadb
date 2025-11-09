@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20251109164812"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "year",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "population",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "gdp",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "CountryStats",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "country",
+      "otherEntityRelationshipName": "countryStat",
+      "relationshipName": "country",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -52,6 +52,25 @@ public class CacheConfiguration {
             createCache(cm, io.santhoshkani.learn.mariadb.domain.User.class.getName() + ".authorities");
             createCache(cm, io.santhoshkani.learn.mariadb.domain.PersistentToken.class.getName());
             createCache(cm, io.santhoshkani.learn.mariadb.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Continent.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Continent.class.getName() + ".regions");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Region.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Region.class.getName() + ".countries");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Country.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Country.class.getName() + ".countryStats");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Country.class.getName() + ".languages");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Language.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Language.class.getName() + ".countries");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.CountryStats.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Vip.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Vip.class.getName() + ".guests");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Vip.class.getName() + ".events");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Guest.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Guest.class.getName() + ".vips");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Guest.class.getName() + ".events");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Event.class.getName());
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Event.class.getName() + ".vips");
+            createCache(cm, io.santhoshkani.learn.mariadb.domain.Event.class.getName() + ".guests");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,67 @@
+{
+  "annotations": {
+    "changelogDate": "20251109164810"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "area",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nationalDay",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "countryCode2",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "2",
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "countryCode3",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "3",
+      "fieldValidateRulesMinlength": "3"
+    }
+  ],
+  "name": "Country",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "year",
+      "otherEntityName": "countryStats",
+      "otherEntityRelationshipName": "country",
+      "relationshipName": "countryStat",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "language",
+      "otherEntityName": "language",
+      "otherEntityRelationshipName": "country",
+      "relationshipName": "language",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "region",
+      "otherEntityRelationshipName": "country",
+      "relationshipName": "region",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20251109164815"
+  },
+  "applications": "*",
+  "documentation": "Additional entity connecting VIPs and Guests for events",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Event",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "vip",
+      "otherEntityRelationshipName": "event",
+      "relationshipName": "vip",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "guest",
+      "otherEntityRelationshipName": "event",
+      "relationshipName": "guest",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,76 @@
+entity Continent {
+  name String required
+}
+
+entity Region {
+  name String required
+}
+
+entity Country {
+  name String required
+  area BigDecimal required
+  nationalDay LocalDate
+  countryCode2 String required minlength(2) maxlength(2)
+  countryCode3 String required minlength(3) maxlength(3)
+}
+
+entity Language {
+  language String required
+}
+
+entity CountryStats {
+  year Integer required
+  population Long
+  gdp BigDecimal
+}
+
+entity Vip {
+  name String required
+}
+
+entity Guest {
+  name String required
+}
+
+/**
+ * Additional entity connecting VIPs and Guests for events
+ */
+entity Event {
+  name String required
+  date Instant required
+}
+
+/**
+ * Relationships
+ */
+relationship OneToMany {
+  Continent{region(name)} to Region{continent(name)}
+}
+
+relationship OneToMany {
+  Region{country(name)} to Country{region(name)}
+}
+
+relationship OneToMany {
+  Country{countryStat(year)} to CountryStats{country(name)}
+}
+
+relationship ManyToMany {
+  Country{language(language)} to Language{country(name)}
+}
+
+relationship ManyToMany {
+  Vip{guest(name)} to Guest{vip(name)}
+}
+
+relationship ManyToMany {
+  Event{vip(name)} to Vip{event(name)}
+  Event{guest(name)} to Guest{event(name)}
+}
+
+/**
+ * Pagination and Service Layer
+ */
+paginate Continent, Region, Country, Language, CountryStats, Vip, Guest, Event with pagination
+service all with serviceClass
+dto all with mapstruct

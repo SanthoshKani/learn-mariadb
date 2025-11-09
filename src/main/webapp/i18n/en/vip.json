@@ -1,0 +1,26 @@
+{
+  "learnMariadbApp": {
+    "vip": {
+      "home": {
+        "title": "Vips",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vip",
+        "createOrEditLabel": "Create or edit a Vip",
+        "notFound": "No Vips found"
+      },
+      "created": "A new Vip is created with identifier { param }",
+      "updated": "A Vip is updated with identifier { param }",
+      "deleted": "A Vip is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Vip { id }?"
+      },
+      "detail": {
+        "title": "Vip"
+      },
+      "id": "ID",
+      "name": "Name",
+      "guest": "Guest",
+      "event": "Event"
+    }
+  }
+}
